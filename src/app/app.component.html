@@ -1,0 +1,34 @@
+<div class="card shadow-lg bg-gradient-to-r from-blue-800 to-purple-600 p-4 rounded-xl">
+    <p-toolbar 
+        styleClass="bg-transparent shadow-lg"
+        [style]="{ 
+          'border-radius': '2rem', 
+          'background-image': 'linear-gradient(45deg, #6EE7B7, #3B82F6)' }">
+        <ng-template pTemplate="start">
+            <button 
+                class="p-link inline-flex justify-content-center align-items-center text-white h-10 w-10 rounded-full hover:bg-gray-700 transition-all duration-300"
+                [routerLink]="['/home']">
+                <i class="pi pi-home text-xl"></i>
+            </button>
+        </ng-template>
+
+        <ng-template pTemplate="center">
+            <div class="flex items-center justify-center gap-4">
+                <h2 class="text-white font-semibold text-lg">Welcome to the Dashboard</h2>
+            </div>
+        </ng-template>
+
+        <ng-template pTemplate="end">
+            <div class="flex items-center gap-2">
+                <p-avatar 
+                    image="https://b3498112.smushcdn.com/3498112/wp-content/uploads/2023/04/iStock-1332978564-scaled.jpg?lossy=2&strip=1&webp=1" 
+                    shape="circle" size="large" class="border-2 border-white shadow-md" />
+                <span class="font-bold text-white text-lg">
+                    Josselyn Mena
+                </span>
+            </div>
+        </ng-template>
+    </p-toolbar>
+</div>
+
+<router-outlet></router-outlet>

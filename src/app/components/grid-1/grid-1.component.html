@@ -1,0 +1,134 @@
+<!-- Botones para cambiar las columnas con el mismo color de fondo -->
+<div class="button-group text-center">
+    <button 
+        (click)="showColumns(1)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 1
+    </button>
+    <button 
+        (click)="showColumns(2)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 2
+    </button>
+    <button 
+        (click)="showColumns(3)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 3
+    </button>
+    <button 
+        (click)="showColumns(4)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 4
+    </button>
+    <button 
+        (click)="showColumns(5)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 5
+    </button>
+    <button 
+        (click)="showColumns(6)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 6
+    </button>
+</div>
+
+<!-- Estilos en línea dentro del HTML -->
+<style>
+    /* Estilo para los botones con gradiente */
+    .btn-gradient {
+        background-image: linear-gradient(45deg, #6EE7B7, #3B82F6);
+        border: none;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 12px 24px;
+        border-radius: 9999px; /* Hace que los botones sean redondeados */
+        transition: all 0.3s ease;
+    }
+
+    /* Efecto hover */
+    .btn-gradient:hover {
+        background-image: linear-gradient(45deg, #4CAF50, #3B82F6); /* Un cambio sutil de gradiente al pasar el mouse */
+        transform: scale(1.05); /* Hace que el botón crezca ligeramente */
+    }
+</style>
+
+<!-- Contenido de las columnas que aparece según el valor de activeColumn -->
+<div *ngIf="activeColumn === 1" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(3, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+</div>
+<div *ngIf="activeColumn === 2" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(3, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+</div>
+<div *ngIf="activeColumn === 3" class="grid">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+</div>
+
+<div *ngIf="activeColumn === 4" class="grid">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+    </div>
+</div>
+
+<div *ngIf="activeColumn === 5" class="grid">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">5</div>
+    </div>
+</div>
+
+<div *ngIf="activeColumn === 6" class="grid">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">5</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">6</div>
+    </div>
+</div>
